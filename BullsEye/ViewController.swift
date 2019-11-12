@@ -44,7 +44,7 @@ class ViewController: UIViewController {
     
     func showAlert(points : Int)
     {
-        let message = "The value of the slider is now: \(currentValue)" + "\nThe target value is \(targetValue)"
+        let message = "Your score: \(points)"
         let alertVC = UIAlertController(title: "Hello World", message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "Ok", style: .default, handler:  {alert in
             //_ in trailling clousure
@@ -80,18 +80,9 @@ class ViewController: UIViewController {
     
     @IBAction func hitMeTappead(_ sender: Any)
     {
-      print("you tapped me")
-        let difference   = abs(targetValue - currentValue)
-        let points : Int
-        switch difference {
-        case 0:
-            points = 200
-        case 1:
-            points = difference + 50
-
-        default:
-            points = difference
-        }
+        let difference = abs(targetValue - currentValue)
+        let points  = 100 - difference
+    
         
         showAlert(points: points)
     }
