@@ -124,6 +124,7 @@
                     <connections>
                         <outlet property="roundValue" destination="aMU-jV-g02" id="1I6-M5-ioZ"/>
                         <outlet property="scoreLabel" destination="5HY-7i-v5E" id="z6q-qC-CTL"/>
+                        <outlet property="slider" destination="QS7-TI-u39" id="FOI-GC-Wat"/>
                         <outlet property="targetLabel" destination="qYg-Yx-UXT" id="iy9-Jh-76c"/>
                     </connections>
                 </viewController>

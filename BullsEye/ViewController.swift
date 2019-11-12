@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var targetLabel: UILabel!
     @IBOutlet weak var roundValue: UILabel!
@@ -28,6 +29,8 @@ class ViewController: UIViewController {
     var score = 0
     override func viewDidLoad() {
         super.viewDidLoad()
+        let roundedValue = slider.value.rounded()
+        currentValue = Int(roundedValue)
         changeTargetValue()
     }
 
@@ -39,15 +42,36 @@ class ViewController: UIViewController {
     }
     
     
-    func showAlert(title : String, message: String)
+    func showAlert(points : Int)
     {
-        let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        let message = "The value of the slider is now: \(currentValue)" + "\nThe target value is \(targetValue)"
+        let alertVC = UIAlertController(title: "Hello World", message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "Ok", style: .default, handler:  {alert in
+            //_ in trailling clousure
+            
+            self.score += points
+            self.scoreLabel.text = String(self.score)
+            
+        })
         alertVC.addAction(action)
         present(alertVC,animated: true, completion: nil)
+        
+        startNewRound()
     
     }
 
+    func startNewRound(){
+        targetValue = Int.random(in: 1...100)
+        currentValue = 50
+        slider.value = Float(currentValue)
+        updateLabels()
+    }
+    
+    func updateLabels()
+    {
+        targetLabel.text = String(targetValue)
+    }
+    
     @IBAction func sliderChanged(_ slider: UISlider)
     {
         currentValue = Int(slider.value.rounded())
@@ -69,18 +93,7 @@ class ViewController: UIViewController {
             points = difference
         }
         
-        //showAlert(title: "Alerta", message: "Obtuviste  \(points) puntos")
-        let alertVC = UIAlertController(title: "Alerta", message: "Obtuviste  \(points) puntos", preferredStyle: .alert)
-        let action = UIAlertAction(title: "Ok", style: .default, handler: {alert in
-            //_ in trailling clousure
-            
-            self.score += points
-            self.scoreLabel.text = String(self.score)
-            
-        })
-        alertVC.addAction(action)
-        present(alertVC,animated: true, completion: nil)
-        
+        showAlert(points: points)
     }
     
     
