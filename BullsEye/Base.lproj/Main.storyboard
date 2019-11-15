@@ -82,6 +82,9 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q1g-ea-b1J">
                                 <rect key="frame" x="726" y="322" width="22" height="22"/>
+                                <connections>
+                                    <segue destination="ens-O5-ZI6" kind="presentation" modalTransitionStyle="flipHorizontal" id="KQl-FA-E7v"/>
+                                </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="1" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="QS7-TI-u39">
                                 <rect key="frame" x="80" y="145.66666666666666" width="631.66666666666663" height="31"/>
@@ -130,7 +133,40 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-57.635467980295566" y="109.59999999999999"/>
+            <point key="canvasLocation" x="-236" y="143"/>
+        </scene>
+        <!--About View Controller-->
+        <scene sceneID="oHU-7t-trl">
+            <objects>
+                <viewController id="ens-O5-ZI6" customClass="AboutViewController" customModule="BullsEye" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AoY-xP-Nb3">
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rlm-WH-Ik2">
+                                <rect key="frame" x="383" y="290" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="close:" destination="ens-O5-ZI6" eventType="touchUpInside" id="kmr-89-wmz"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vrd-vi-Avv">
+                                <rect key="frame" x="106" y="20" width="642" height="262"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">*** Bull's Eye***                                                                                                                                      Welcome to the awesome game of Bull's Eye where you can win points and fame by dragging a slider.                                                                                                                                                           Your goal is to place the slider as close as possible to the target value. The closer you are, the more points you score. Enjoy!</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="sLm-70-nFa"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5FF-Bn-FO2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="409.35960591133005" y="141.59999999999999"/>
         </scene>
     </scenes>
 </document>
