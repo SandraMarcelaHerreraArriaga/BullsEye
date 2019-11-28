@@ -1,5 +1,5 @@
 //
-//  AboutViewController.swift
+//  AboutAuthorViewController.swift
 //  BullsEye
 //
 //  Created by Sandra Herrera on 11/14/19.
@@ -7,27 +7,16 @@
 //
 
 import UIKit
-import WebKit
 
-class AboutViewController: UIViewController {
+class AboutAuthorViewController: UIViewController {
 
-    @IBOutlet weak var webView: WKWebView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if let htmlPath = Bundle.main.path(forResource: "BullsEye", ofType: "html") {
-            let url = URL(fileURLWithPath: htmlPath)
-            let request = URLRequest(url: url)
-            webView.load(request)
-        }
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func close(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
-    
+
     /*
     // MARK: - Navigation
 
@@ -37,6 +26,8 @@ class AboutViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-  
+    @IBAction func close(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     
 }

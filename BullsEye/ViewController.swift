@@ -34,6 +34,22 @@ class ViewController: UIViewController {
         roundValue.text = String(round)
         currentValue = Int(roundedValue)
         changeTargetValue()
+        
+        let thumbImageNormal = #imageLiteral(resourceName: "SliderThumb-Normal")
+        slider.setThumbImage(thumbImageNormal, for: .normal)
+        
+        let thumbImageHighlighted = #imageLiteral(resourceName: "SliderThumb-Highlighted")
+        slider.setThumbImage(thumbImageHighlighted, for: .highlighted)
+        
+        
+        let insets = UIEdgeInsets(top: 0, left: 14, bottom: 0, right: 14)
+        let trackLeftImage = #imageLiteral(resourceName: "SliderTrackLeft")
+        let trackLeftResizeable = trackLeftImage.resizableImage(withCapInsets: insets)
+        slider.setMinimumTrackImage(trackLeftResizeable, for: .normal)
+        
+        let trackRighttImage = #imageLiteral(resourceName: "SliderTrackRight")
+        let trackRighttResizeable = trackRighttImage.resizableImage(withCapInsets: insets)
+        slider.setMaximumTrackImage(trackRighttResizeable, for: .normal)
     }
 
     
@@ -46,8 +62,6 @@ class ViewController: UIViewController {
     
     func showAlert(points : Int, difference : Int)
     {
-        
-        
         let message = "Your score: \(points)"
         let alertVC = UIAlertController(title: titleAlert(difference: difference), message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "Ok", style: .default, handler:  {alert in
@@ -123,6 +137,10 @@ class ViewController: UIViewController {
         newGame()
     }
     
+    @IBAction func informationAuthor(_ sender: UIButton) {
+    
+        performSegue(withIdentifier: "infoAuthor", sender: self)
+    }
     func newGame(){
         score = 0
         round = 0

@@ -8,15 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		FC66D38A237E55F3006FA784 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC66D389237E55F3006FA784 /* AboutViewController.swift */; };
+		FC66D38C237E5A9F006FA784 /* AboutAuthorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC66D38B237E5A9F006FA784 /* AboutAuthorViewController.swift */; };
 		FC8CE587232D4CE0009A33F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8CE586232D4CE0009A33F1 /* AppDelegate.swift */; };
 		FC8CE589232D4CE0009A33F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8CE588232D4CE0009A33F1 /* ViewController.swift */; };
 		FC8CE58C232D4CE0009A33F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC8CE58A232D4CE0009A33F1 /* Main.storyboard */; };
 		FC8CE58E232D4CE3009A33F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC8CE58D232D4CE3009A33F1 /* Assets.xcassets */; };
 		FC8CE591232D4CE3009A33F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC8CE58F232D4CE3009A33F1 /* LaunchScreen.storyboard */; };
+		FC916F10238CC63700325A5B /* BullsEye.html in Resources */ = {isa = PBXBuildFile; fileRef = FC916F0F238CC63700325A5B /* BullsEye.html */; };
+		FC916F13238CCE8500325A5B /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC916F12238CCE8500325A5B /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FC66D389237E55F3006FA784 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		FC66D38B237E5A9F006FA784 /* AboutAuthorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAuthorViewController.swift; sourceTree = "<group>"; };
 		FC8CE583232D4CE0009A33F1 /* BullsEye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BullsEye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC8CE586232D4CE0009A33F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC8CE588232D4CE0009A33F1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +28,8 @@
 		FC8CE58D232D4CE3009A33F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC8CE590232D4CE3009A33F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC8CE592232D4CE3009A33F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC916F0F238CC63700325A5B /* BullsEye.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = BullsEye.html; sourceTree = "<group>"; };
+		FC916F12238CCE8500325A5B /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC916F13238CCE8500325A5B /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +49,7 @@
 			children = (
 				FC8CE585232D4CE0009A33F1 /* BullsEye */,
 				FC8CE584232D4CE0009A33F1 /* Products */,
+				FC916F11238CCE8500325A5B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +71,18 @@
 				FC8CE58F232D4CE3009A33F1 /* LaunchScreen.storyboard */,
 				FC8CE592232D4CE3009A33F1 /* Info.plist */,
 				FC66D389237E55F3006FA784 /* AboutViewController.swift */,
+				FC66D38B237E5A9F006FA784 /* AboutAuthorViewController.swift */,
+				FC916F0F238CC63700325A5B /* BullsEye.html */,
 			);
 			path = BullsEye;
+			sourceTree = "<group>";
+		};
+		FC916F11238CCE8500325A5B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC916F12238CCE8500325A5B /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC8CE591232D4CE3009A33F1 /* LaunchScreen.storyboard in Resources */,
+				FC916F10238CC63700325A5B /* BullsEye.html in Resources */,
 				FC8CE58E232D4CE3009A33F1 /* Assets.xcassets in Resources */,
 				FC8CE58C232D4CE0009A33F1 /* Main.storyboard in Resources */,
 			);
@@ -141,6 +160,7 @@
 				FC66D38A237E55F3006FA784 /* AboutViewController.swift in Sources */,
 				FC8CE589232D4CE0009A33F1 /* ViewController.swift in Sources */,
 				FC8CE587232D4CE0009A33F1 /* AppDelegate.swift in Sources */,
+				FC66D38C237E5A9F006FA784 /* AboutAuthorViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
